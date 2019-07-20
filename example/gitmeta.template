@@ -1,0 +1,9 @@
+#include <stdbool.h>
+
+const char GIT_HASH[] = "{{if.Hash}} {{- .Hash -}} {{- else -}} unknown {{- end}}";
+const char GIT_BRANCH[] = "{{.Branch}}";
+const char GIT_TAG[] = "{{.Tag}}";
+const char GIT_DESCRIBE[] = "{{.Describe}}";
+const char GIT_SHOART_HASH[] = "{{.ShortHash}}";
+const bool GIT_IS_CLEAN = {{if.IsClean}} true {{- else -}} false {{- end}};
+const bool GIT_IS_CLEAN_NO_UNTRACED_FILES = {{if.IsCleanNoUnTracedFiles}} true {{- else -}} false {{- end}};
